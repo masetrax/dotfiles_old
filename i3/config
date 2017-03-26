@@ -182,4 +182,3 @@ bar {
 # exec i3-config-wizard
 exec feh --randomize --bg-fill ~/Pictures/Wallpapers/
 exec compton --vsync opengl -cb
-exec tty-clock -c
