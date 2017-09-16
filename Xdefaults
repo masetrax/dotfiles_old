@@ -6,39 +6,48 @@ URxvt.perl-ext-common: default,matcher
 URxvt.url-launcher: /usr/local/bin/xdg-open
 URxvt.matcher.button: 1
 
+! ------------------------------------------------------------------------------
+! ROFI Color theme
+! ------------------------------------------------------------------------------
+rofi.color-enabled: true
+rofi.color-window: #2b303b, #2b303b, argb:0ffffff
+rofi.color-normal: #2b303b, #a3be8c, #2b303b, #65737e, #a3be8c
+rofi.color-active: #65737e, #a3be8c, #65737e, #65737e, #a3be8c
+rofi.color-urgent: #65737e, #a3be8c, #65737e, #65737e, #a3be8c
+
 ! special
-*.foreground:   #f8f8f2
-*.background:   #272822
-*.cursorColor:  #f8f8f2
+*.foreground:   #c0c5ce
+*.background:   #2b303b
+*.cursorColor:  #c0c5ce
 
 ! black
-*.color0:       #272822
-*.color8:       #75715e
+*.color0:       #2b303b
+*.color8:       #65737e
 
 ! red
-*.color1:       #f92672
-*.color9:       #f92672
+*.color1:       #bf616a
+*.color9:       #bf616a
 
 ! green
-*.color2:       #a6e22e
-*.color10:      #a6e22e
+*.color2:       #a3be8c
+*.color10:      #a3be8c
 
 ! yellow
-*.color3:       #f4bf75
-*.color11:      #f4bf75
+*.color3:       #ebcb8b
+*.color11:      #ebcb8b
 
 ! blue
-*.color4:       #66d9ef
-*.color12:      #66d9ef
+*.color4:       #8fa1b3
+*.color12:      #8fa1b3
 
 ! magenta
-*.color5:       #ae81ff
-*.color13:      #ae81ff
+*.color5:       #b48ead
+*.color13:      #b48ead
 
 ! cyan
-*.color6:       #a1efe4
-*.color14:      #a1efe4
+*.color6:       #96b5b4
+*.color14:      #96b5b4
 
 ! white
-*.color7:       #f8f8f2
-*.color15:      #f9f8f5
+*.color7:       #c0c5ce
+*.color15:      #eff1f5
