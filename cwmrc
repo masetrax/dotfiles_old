@@ -1,0 +1,28 @@
+# APPEARANCE
+borderwidth 1
+color activeborder "#a3be8c"
+color menubg "#2b303b"
+color menufg "#65737e"
+color font "#a3be8c"
+color selfont "#a3be8c"
+color groupborder "#8fa1b3"
+gap 10 10 10 10
+
+# KEY BINDINGS
+bind-key M-Return window-exec
+bind-key CM-r 		restart
+bind-key CM-Return 	"urxvt"
+bind-key M-p		"rofi -show run -hide-scrollbar"
+bind-key CM-f		window-fullscreen
+bind-key CM-m		window-maximize
+bind-key CM-v		window-vtile
+bind-key CM-b		window-htile
+bind-key CM-q 		quit
+
+# APPLICATION MENU
+command _Term_ urxvt
+command WWW firefox
+command IRC "urxvt -e weechat"
+
+# AUTOGROUPING
+autogroup 2 Firefox
