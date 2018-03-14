@@ -13,30 +13,14 @@ sticky yes
 # KEY BINDINGS
 bind-key M-Return 	window-exec
 bind-key CMS-r 		restart
-bind-key CMS-q		Quit
+bind-key CMS-q		quit
 bind-key CM-Return 	"urxvt"
 bind-key CM-p		"rofi -show run -hide-scrollbar"
-bind-key CM-g		Toggle group membership of current window
 bind-key CM-f		window-fullscreen
 bind-key CM-m		window-maximize
 bind-key CM-v		window-vtile
 bind-key CM-b		window-htile
-bind-key CM-1		window-movetogroup-1
-bind-key CM-2		window-movetogroup-2
-bind-key CM-3		window-movetogroup-3
-bind-key CM-4		window-movetogroup-4
-bind-key CM-5		window-movetogroup-5
-bind-key CM-6		window-movetogroup-6
-bind-key CM-7		window-movetogroup-7
-bind-key CM-8		window-movetogroup-8
-bind-key CM-9		window-movetogroup-9
 
-# MOUSE BINDINGS
-M-M1			Move current window
-CM-M1			Toggle group membership of current window
-M-M2			Resize current window
-M-M3			Lower current window
-CMS-M3			Hide current window
 
 # APPLICATION MENU
 command " Term" urxvt
