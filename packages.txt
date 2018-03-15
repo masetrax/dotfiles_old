@@ -11,6 +11,7 @@ paper-icon-theme--
 rofi--
 rxvt-unicode--
 scrot--
+terminus-font--
 unrar--
 unzip--
 vim--
