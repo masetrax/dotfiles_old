@@ -2,13 +2,14 @@ cmus--
 compton--
 emacs--
 feh--
-firefox-esr--
+firefox--
 git--
 hexchat--
 htop--
 mpv--
 paper-gtk-theme--
 paper-icon-theme--
+remmina--
 rofi--
 rxvt-unicode--
 scrot--
