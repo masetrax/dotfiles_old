@@ -15,6 +15,7 @@ rofi--
 rxvt-unicode--
 scrot--
 terminus-font--
+transmission-gtk--
 unrar--
 unzip--
 vim--

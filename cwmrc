@@ -26,7 +26,12 @@ bind-key CM-b		window-htile
 command " Term" urxvt
 command " WWW" firefox
 command " IRC" "urxvt -e weechat"
+command " IRC GUI " hexchat
+command " Torrents " transmission-gtk
 command " Music" "urxvt -e cmus"
 
 # AUTOGROUPING
 autogroup 2 Firefox
+autogroup 3 Hexchat
+autogroup 4 Transmission-gtk
+
