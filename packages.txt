@@ -7,6 +7,7 @@ git--
 hexchat--
 htop--
 mpv--
+neovim--
 paper-gtk-theme--
 paper-icon-theme--
 remmina--
