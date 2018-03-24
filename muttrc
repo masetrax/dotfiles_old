@@ -1,8 +1,8 @@
-set imap_user = "<email>"
-set imap_pass = "<password>"
-set smtp_url = "smtp://<username>@smtp.gmail.com:587/"
-set from = "<email>"
-set realname = "<name>"
+set imap_user = "user@example.com"
+set imap_pass = "password"
+set smtp_url = "smtp://user@smtp.gmail.com:587/"
+set from = "user@example.com"
+set realname = "Ryan Mason"
 
 set folder = "imaps://imap.gmail.com:993"
 set spoolfile = "+INBOX"
@@ -22,3 +22,9 @@ ignore "Authentication-Results:"
 ignore "DomainKey-Signature:"
 ignore "DKIM-Signature:"
 hdr_order Date From To CC
+
+# SIDEBAR CONFIGURATION
+set sidebar_visible
+set sidebar_format = "%B%?F? [%F]?%* %?N?%N/?%S"
+set mail_check_stats
+
