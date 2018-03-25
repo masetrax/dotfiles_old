@@ -28,7 +28,8 @@ command " WWW" firefox
 command " IRC" "urxvt -e weechat"
 command " IRC GUI " hexchat
 command " Torrents " transmission-gtk
-command " Music" "urxvt -e cmus"
+command " Music " "urxvt -e cmus"
+command " Clock" "urxvt -e grdc"
 
 # AUTOGROUPING
 autogroup 2 Firefox
