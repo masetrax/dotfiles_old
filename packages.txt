@@ -1,7 +1,9 @@
 cmus--
 compton--
+cowsay--
 emacs--
 feh--
+figlet--
 firefox--
 git--
 hexchat--
