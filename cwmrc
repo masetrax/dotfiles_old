@@ -20,7 +20,7 @@ bind-key CM-f		window-fullscreen
 bind-key CM-m		window-maximize
 bind-key CM-v		window-vtile
 bind-key CM-b		window-htile
-
+bind-key CM-c		"urxvt -e grdc -s 10"
 
 # APPLICATION MENU
 command " Term" urxvt
@@ -29,7 +29,7 @@ command " IRC" "urxvt -e weechat"
 command " IRC GUI " hexchat
 command " Torrents " transmission-gtk
 command " Music " "urxvt -e cmus"
-command " Clock" "urxvt -e grdc"
+command " Clock" "urxvt -e grdc -s 10"
 
 # AUTOGROUPING
 autogroup 2 Firefox
