@@ -9,9 +9,11 @@ git--
 hexchat--
 htop--
 mpv--
-neovim--
+neomutt--
 paper-gtk-theme--
 paper-icon-theme--
+python3--
+R--
 remmina--
 rofi--
 rxvt-unicode--
