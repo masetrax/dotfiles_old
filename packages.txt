@@ -1,13 +1,12 @@
 cmus--
 compton--
-cowsay--
 emacs--
 feh--
-figlet--
 firefox--
 git--
-hexchat--
 htop--
+jdk--
+jre--
 mpv--
 neomutt--
 paper-gtk-theme--
