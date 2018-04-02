@@ -5,6 +5,7 @@ firefox--
 git--
 hexchat--
 htop--
+irssi--
 jdk--
 jre--
 lxappearance--
