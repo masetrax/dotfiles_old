@@ -3,6 +3,7 @@ compton--
 feh--
 firefox--
 git--
+hexchat--
 htop--
 jdk--
 jre--
