@@ -34,4 +34,4 @@ command " Clock" "urxvt -e grdc -s 10"
 autogroup 2 Firefox
 autogroup 3 Hexchat
 autogroup 4 Transmission-gtk
-
+autogroup 9 "xconsole", "XConsole"
