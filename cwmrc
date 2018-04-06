@@ -25,7 +25,7 @@ bind-key CM-c		"urxvt -e grdc -s 10"
 # APPLICATION MENU
 command " Term" urxvt
 command " WWW" firefox
-command " IRC" "urxvt -e weechat"
+command " IRC" "urxvt -e irssi"
 command " Torrents " transmission-gtk
 command " Music " "urxvt -e cmus"
 command " Clock" "urxvt -e grdc -s 10"
