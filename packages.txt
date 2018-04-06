@@ -3,7 +3,6 @@ compton--
 feh--
 firefox--
 git--
-hexchat--
 htop--
 irssi--
 jdk--
@@ -25,7 +24,6 @@ transmission-gtk--
 unrar--
 unzip--
 vim--
-weechat--
 zathura--
 zathura-cb
 zathura-pdf-poppler
