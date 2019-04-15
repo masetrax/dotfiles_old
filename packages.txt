@@ -17,3 +17,13 @@ zathura-pdf-poppler
 zip--
 webkitgtk4--
 dunst--
+lxappearance--
+paper-gtk-theme--
+paper-icon-theme--
+ranger--
+rxvt-unicode--
+transmission-gtk--
+w3m--
+weechat--
+wget--
+

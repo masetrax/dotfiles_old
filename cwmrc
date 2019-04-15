@@ -1,34 +1,38 @@
 # APPEARANCE
-borderwidth 1
-color activeborder "#a3be8c"
-color menubg "#2b303b"
-color menufg "#65737e"
-color font "#a3be8c"
-color selfont "#a3be8c"
-gap 10 10 10 10
+borderwidth 4
+color activeborder "#81a1c1"
+color menubg "#3b4252"
+color menufg "#81a1c1"
+color font "#d8dee9"
+color selfont "#3b4252"
+fontname "Terminus:size=9:bold"
+gap 15 15 15 15
 
 # STICKY MODE
 sticky yes
 
 # KEY BINDINGS
 bind-key M-Return 	window-exec
-bind-key CMS-r 		restart
-bind-key CMS-q		quit
-bind-key CM-Return 	"urxvt"
-bind-key CM-p		"rofi -show run -hide-scrollbar"
-bind-key CM-f		window-fullscreen
-bind-key CM-m		window-maximize
-bind-key CM-v		window-vtile
-bind-key CM-b		window-htile
-bind-key CM-c		"urxvt -e grdc -s 10"
+bind-key 4S-r 		restart
+bind-key 4S-q		quit
+bind-key 4S-Return 	"st"
+bind-key 4-p		"dmenu_run"
+bind-key 4-w		"firefox"
+bind-key 4S-f		window-fullscreen
+bind-key 4S-m		window-maximize
+bind-key 4S-v		window-vtile
+bind-key 4S-b		window-htile
+bind-key 4S-c		"st -e grdc -s 10"
 
 # APPLICATION MENU
+command " ---------- " blank
 command " Term" urxvt
 command " WWW" firefox
-command " IRC" "urxvt -e irssi"
+command " File Mgr" "st -e ranger"
+command " IRC" "st -e weechat"
 command " Torrents " transmission-gtk
-command " Music " "urxvt -e cmus"
-command " Clock" "urxvt -e grdc -s 10"
+command " Music " "st -e cmus"
+command " ----------" blank
 
 # AUTOGROUPING
 autogroup 2 Firefox
