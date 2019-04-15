@@ -22,7 +22,6 @@ bind-key 4S-f		window-fullscreen
 bind-key 4S-m		window-maximize
 bind-key 4S-v		window-vtile
 bind-key 4S-b		window-htile
-bind-key 4S-c		"st -e grdc -s 10"
 
 # APPLICATION MENU
 command " ---------- " blank
