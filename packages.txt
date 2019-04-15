@@ -26,4 +26,3 @@ transmission-gtk--
 w3m--
 weechat--
 wget--
-
