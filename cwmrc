@@ -13,6 +13,7 @@ sticky yes
 
 # KEY BINDINGS
 bind-key M-Return 	window-exec
+bind-key 4S-c		window-delete
 bind-key 4S-r 		restart
 bind-key 4S-q		quit
 bind-key 4S-Return 	"st"
