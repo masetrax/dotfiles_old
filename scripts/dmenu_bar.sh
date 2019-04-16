@@ -5,7 +5,7 @@ Clock(){
 }
 
 Date(){
-	date "+%d.%m.%Y"
+	date "+%a %b %d"
 }
 
 Volume(){
@@ -19,4 +19,4 @@ Battery(){
 }
 
 
-echo -n | dmenu -nb "#3B4252" -nf "#3B4252" -sb "#3B4252" -sf "#D8DEE9" -p "$(Clock) $(Date) $(Volume) $(Battery)"> /dev/null
+echo -n | dmenu -nb "#3B4252" -nf "#3B4252" -sb "#3B4252" -sf "#D8DEE9" -p "$(Date) $(Clock) - $(Volume) - $(Battery)"> /dev/null
