@@ -1,0 +1,52 @@
+# APPEARANCE
+borderwidth 4
+color activeborder "#81a1c1"
+color menubg "#3b4252"
+color menufg "#81a1c1"
+color font "#d8dee9"
+color selfont "#3b4252"
+fontname "Terminus:size=9:bold"
+gap 15 15 15 15
+ignore "bar"
+ignore "firefox"
+ignore "xclock"
+
+# STICKY MODE
+sticky yes
+
+# KEY BINDINGS
+bind-key 4S-1		group-toggle-1
+bind-key 4S-2		group-toggle-2
+bind-key 4S-3		group-toggle-3
+bind-key 4S-4		group-toggle-4
+bind-key 4S-5		group-toggle-5
+bind-key 4S-6		group-toggle-6
+bind-key 4S-7		group-toggle-7
+bind-key 4S-8		group-toggle-8
+bind-key 4S-9		group-toggle-all
+bind-key M-Return 	window-exec
+bind-key 4S-c		window-delete
+bind-key 4S-r 		restart
+bind-key 4S-q		quit
+bind-key 4S-s		/home/masetrax/.scripts/dmenu_bar.sh
+bind-key 4S-Return 	"st"
+bind-key 4-p		"dmenu_run"
+bind-key 4-w		"firefox"
+bind-key 4S-f		window-fullscreen
+bind-key 4S-m		window-maximize
+bind-key 4S-v		window-vtile
+
+
+# APPLICATION MENU
+command " Term" urxvt
+command " WWW" firefox
+command " File Mgr" "st -e ranger"
+command " IRC" "st -e weechat"
+command " Torrents " transmission-gtk
+command " Music " "st -e cmus"
+
+# AUTOGROUPING
+autogroup 2 Firefox
+autogroup 3 Hexchat
+autogroup 4 Transmission-gtk
+autogroup 9 "xconsole", "XConsole"

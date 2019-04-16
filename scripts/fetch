@@ -1,0 +1,14 @@
+#!/bin/sh
+
+sh=$(basename $SHELL)
+pac=$(pkg_info -q | wc -l)
+wm=$(tail -1 ~/.xsession)
+
+col="$(tput setaf 3)"
+reset="$(tput sgr0)"
+
+echo "${col}            __
+(\,--------'()'--o  ${reset}Packages: $pac
+${col} (_    ___    /~    ${reset}Shell:    $sh
+${col}  (_)_)  (_)_)	    ${reset}WM:	      $wm
+"
