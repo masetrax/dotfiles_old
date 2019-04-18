@@ -6,6 +6,7 @@ htop--
 jdk--
 jre--
 mpv--
+youtube-dl--
 noto-fonts--
 terminus-font--
 unrar--
@@ -26,3 +27,10 @@ transmission-gtk--
 w3m--
 weechat--
 wget--
+gstreamer1--
+gstreamer1-plugins-bad--
+gstreamer1-plugins-good--
+gstreamer1-plugins-ugly
+gstreamer1-plugins-libav
+tabbed--
+libnfs--
