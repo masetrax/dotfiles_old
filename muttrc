@@ -1,24 +1,29 @@
-set imap_user = "user@example.com"
-set imap_pass = "password"
-set smtp_url = "smtp://user@smtp.gmail.com:587/"
-set from = "user@example.com"
-set realname = "Ryan Mason"
+set delete = "yes"
+set editor = "vim"
+set mail_check = 60
+set move = no
+set sort = 'threads'
+set sort_aux = 'last-date-received'
+set imap_check_subscribed
 
+
+# Account Information
+set imap_user = "xxxx@gmail.com"
+set imap_pass = "xxxx"
+set smtp_url = "smtp://user@smtp.gmail.com:587/"
+set from = "xxxx@gmail.com"
+set realname = "Ryan Mason"
 set folder = "imaps://imap.gmail.com:993"
 set spoolfile = "+INBOX"
 set record = "+[Gmail]/Sent Mail"
 set postponed= "+[Gmail]/Drafts"
 
+# Mutt Folders
 set header_cache=~/.mutt/cache/headers
 set message_cachedir=~/.mutt/cache/bodies
 set certificate_file=~/.mutt/certificates
 
-set move = no
-
-set sort = 'threads'
-set sort_aux = 'last-date-received'
-set imap_check_subscribed
-
+# Authentication
 ignore "Authentication-Results:"
 ignore "DomainKey-Signature:"
 ignore "DKIM-Signature:"
