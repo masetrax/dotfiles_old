@@ -1,0 +1,94 @@
+#
+# ratpoison config
+# by joshua stein <jcs@jcs.org>
+#
+# some of these settings require changes from my ratpoison tree:
+# https://github.com/jcs/ratpoison
+#
+
+# call them as i sees them
+set winname title
+
+# keep the bar in the upper left displaying the active frame title
+set barborder 0
+set bargravity nw
+set barpadding 14 10
+set barinpadding 1
+set barsticky on
+set font terminus:size=9
+set ignorehints on
+set inputwidth 0
+set msgwait 3
+set onlyborder 0
+set padding 0 30 0 0
+set warp off
+set winliststyle row
+set winfmt %t
+# set startupmessage 0
+
+# extract terminal background from Xdefaults to use as fgcolor
+exec _C=`xrdb -query | grep '^*.background' | sed 's/.*:[[:space:]]//'`; ratpoison -c "set fgcolor $_C"
+set bgcolor #81a1c1
+
+# add leading and trailing space around this now that the padding is small
+set framefmt  frame %f (%wx%h) 
+
+# window borders
+set border 0
+set gap 10
+set fwcolor orange3
+set bwcolor gray
+
+# keybindings
+escape s-a
+bind s split
+bind C-s split
+bind S hsplit
+bind C-S hsplit
+bind C-Tab focuslast
+bind c exec urxvt
+bind C-c exec urxvt
+bind C-r restart
+
+# lock the screen
+bind L exec xset s activate
+
+# prevent accidental closes
+unbind k
+
+# swap workspaces, but define it in 'top' to avoid having to prefix with C-a
+definekey top s-1 vselect 1
+definekey top s-2 vselect 2
+definekey top s-3 vselect 3
+definekey top s-4 vselect 4
+definekey top s-5 vselect 5
+definekey top s-w exec firefox
+definekey top s-p exec dmenu_run -b
+definekey top s-t time
+definekey top s-x kill
+definekey top s-v vmove
+
+# i like tab just going between the same two windows
+bind Tab focuslast
+bind grave focus
+
+# act normal but prevent firefox raising itself when links are opened from
+# other apps
+set rudeness 12
+
+# let popups stay centered
+unmanage xmessage
+unmanage xprompt
+unmanage OpenSSH Authentication Passphrase Request
+unmanage dzen title
+
+# startup configuration
+
+# initialize workspaces
+vinit
+hsplit
+
+# allow machine-specific overrides of keys
+source .ratpoisonrc.local
+
+exec urxvt

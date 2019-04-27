@@ -1,5 +1,6 @@
 URxvt.font: xft:terminus:size=9
 URxvt.letterSpace: 1
+URxvt.internalBorder: 12
 URxvt.scrollBar: false
 URxvt.perl-lib: /usr/local/lib/urxvt/perl/
 URxvt.perl-ext-common: default,matcher
@@ -9,27 +10,16 @@ URxvt.matcher.button: 1
 Xcursor.theme: Paper
 Xcursor.size: 10
 
-! ------------------------------------------------------------------------------
-! ROFI Color theme
-! ------------------------------------------------------------------------------
-rofi.color-enabled: true
-rofi.color-window: #2b303b, #2b303b, argb:0fffffff
-rofi.color-normal: #2b303b, #a3be8c, #2b303b, #65737e, #a3be8c
-rofi.color-active: #65737e, #a3be8c, #65737e, #65737e, #a3be8c
-rofi.color-urgent: #65737e, #a3be8c, #65737e, #65737e, #a3be8c
-
-! special
-*.foreground:   #c0c5ce
-*.background:   #2b303b
-*.cursorColor:  #c0c5ce
+*.foreground:   #d8dee9
+*.background:   #2e3440
 
 ! black
-*.color0:       #2b303b
-*.color8:       #65737e
+*.color0:       #3B4252
+*.color8:       #4C566A
 
 ! red
-*.color1:       #bf616a
-*.color9:       #bf616a
+*.color1:       #BF616A
+*.color9:       #BF616A
 
 ! green
 *.color2:       #a3be8c
@@ -40,17 +30,17 @@ rofi.color-urgent: #65737e, #a3be8c, #65737e, #65737e, #a3be8c
 *.color11:      #ebcb8b
 
 ! blue
-*.color4:       #8fa1b3
-*.color12:      #8fa1b3
+*.color4:       #81a1c1
+*.color12:      #81a1c1
 
 ! magenta
 *.color5:       #b48ead
 *.color13:      #b48ead
 
 ! cyan
-*.color6:       #96b5b4
-*.color14:      #96b5b4
+*.color6:       #88c0d0
+*.color14:      #8fbcbb
 
 ! white
-*.color7:       #c0c5ce
-*.color15:      #eff1f5
+*.color7:       #e5e9f0
+*.color15:      #eceff4

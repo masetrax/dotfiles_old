@@ -1,0 +1,35 @@
+# NEWS
+http://rss.cnn.com/rss/cnn_topstories.rss "~CNN News"
+http://newsrss.bbc.co.uk/rss/newsonline_world_edition/front_page/rss.xml "~BBC News"
+
+# SPORTS
+http://www.espn.com/espn/rss/nba/news "~ESPN NBA News"
+https://www.teamtalk.com/feed "~TEAMtalk Football News"
+
+# NERD RSS
+https://www.reddit.com/r/OpenBSD/.rss "~OpenBSD Reddit"
+https://www.romanzolotarev.com/n/rss.xml "~Roman Zolotarev Blog"
+https://jcs.org/rss "~JCS Blog"
+https://undeadly.org/cgi?action=rss "~OpenBSD Journal"
+https://www.i-bsd.com/feed.xml "~iBSD Blog"
+
+# MINIMALISM
+https://exilelifestyle.com/feed/ "~Exile Lifestyle"
+http://feeds.feedburner.com/becomingminimalistcom
+https://www.theminimalists.com/feed/
+http://feeds.feedburner.com/BeMoreWithLess
+https://zenhabits.net/feed/
+https://www.mindful.org/feed/
+
+
+
+
+# PODCASTS
+https://feeds.fireside.fm/bsdnow/rss "~BSD Now Podcast"
+http://theminimalists.libsyn.com/rss "~The Minimalists Podcast"
+http://feeds.feedburner.com/FatManOnBatman "~Fat Man Beyond"
+http://joeroganexp.joerogan.libsynpro.com/rss "~The Joe Rogan Experience"
+
+# YouTube
+https://podsync.net/6uuXjLd6d "~Matt D'Avella YouTube"
+https://podsync.net/T0IjefdnE "~iBSD YouTube"

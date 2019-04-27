@@ -9,6 +9,7 @@ fontname "Terminus:size=9:bold"
 gap 15 15 15 15
 ignore "bar"
 ignore "firefox"
+ignore "Firefox"
 ignore "xclock"
 
 # STICKY MODE
@@ -33,6 +34,7 @@ bind-key 4S-s		/home/masetrax/.scripts/dmenu_bar.sh
 bind-key 4S-Return 	"st"
 bind-key 4-p		"dmenu_run"
 bind-key 4-w		"firefox"
+bind-key 4-e		"tabbed -c surf -e"
 bind-key 4S-f		window-fullscreen
 bind-key 4S-m		window-maximize
 bind-key 4S-v		window-vtile
@@ -50,7 +52,8 @@ command " Music " "st -e cmus"
 command " Stats " /home/masetrax/.scripts/dmenu_bar.sh
 
 # AUTOGROUPING
-autogroup 2 Firefox
-autogroup 3 "st-256color", "st"
+autogroup 1 "st-256color", "st"
+autogroup 1 "surf", "Surf"
+autogroup 1 "tabbed", "tabbed"
+autogroup 2  Firefox
 autogroup 4 Transmission-gtk
-autogroup 9 "xconsole", "XConsole"
