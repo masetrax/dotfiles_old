@@ -40,7 +40,7 @@ cleanup-on-quit no
 notify-program "notify-send"
 
 # PODCASTS
-download-path "~/Downloads /%h/%n"
+download-path "~/Downloads/Podcasts/%h/%n"
 max-downloads 1
 player "mpv"
 macro m set browser "mpv %u"; open-in-browser ; set browser "surf %u"

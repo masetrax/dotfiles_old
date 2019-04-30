@@ -1,8 +1,6 @@
-cmus--
 compton--
 feh--
 firefox--
-htop--
 jdk--
 jre--
 mpv--
@@ -18,13 +16,10 @@ zip--
 webkitgtk4--
 dunst--
 lxappearance--
-paper-gtk-theme--
 paper-icon-theme--
 ranger--
-rxvt-unicode--
-transmission-gtk--
 w3m--
-weechat--
+irssi--
 wget--
 gstreamer1--
 gstreamer1-plugins-bad--
@@ -34,3 +29,9 @@ gstreamer1-plugins-libav
 libnfs--
 autoconf--
 automake--
+dzen--
+rtorrent--
+htop--
+mpd--
+ncmpcpp--
+mpc--

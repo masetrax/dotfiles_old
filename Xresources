@@ -1,12 +1,3 @@
-URxvt.font: xft:terminus:size=9
-URxvt.letterSpace: 1
-URxvt.internalBorder: 12
-URxvt.scrollBar: false
-URxvt.perl-lib: /usr/local/lib/urxvt/perl/
-URxvt.perl-ext-common: default,matcher
-URxvt.url-launcher: /usr/local/bin/xdg-open
-URxvt.matcher.button: 1
-
 Xcursor.theme: Paper
 Xcursor.size: 10
 
@@ -14,8 +5,8 @@ Xcursor.size: 10
 *.background:   #2e3440
 
 ! black
-*.color0:       #3B4252
-*.color8:       #4C566A
+*.color0:       #3b4252
+*.color8:       #4c556a
 
 ! red
 *.color1:       #BF616A
@@ -44,3 +35,80 @@ Xcursor.size: 10
 ! white
 *.color7:       #e5e9f0
 *.color15:      #eceff4
+
+*.scrollbar.background:		#2e3440
+*.scrollbar.foreground:		d8dee9
+*.scrollbar.minimumThumb:	50
+*.scrollbar.width:		10
+*.borderColor:			#d8dee9
+
+! xterm-specific settings
+XTerm.utf8:			1
+*.internalBorder: 		12
+*.saveLines:			20000
+*.scrollBar:			false
+XTerm.rightScrollBar:		true
+URxvt.scrollBar_right:		true
+URxvt.scrollstyle:		xterm
+*.selectToClipboard:		true
+*.termName:			xterm-256color
+*.utmpInhibit:			true
+
+! hide when typing
+XTerm.pointerMode:		2
+URxvt.pointerBlank:		true
+
+! needed by ratpoison
+XTerm.allowSendEvents:		true
+! which disables allowColorOps, but empty the list of actual disabled ops
+! which effectively re-enables color ops
+XTerm.disallowedColorOps:
+
+XTerm.visualBell:		false
+
+#ifdef HIDPI
+XTerm.vt100.faceName:		terminus:size=12
+URxvt.font:			xft:terminus:size=12
+URxvt.boldFont:			xft:terminus:weight=bold:size=12
+URxvt.letterSpace:		-1
+#else
+URxvt.font:			fixed
+URxvt.letterSpace:		0
+#endif
+
+! make alt+v/command+v paste clipboard
+XTerm.vt100.translations:	#override\
+    Meta <KeyPress> V: insert-selection(CLIPBOARD, PRIMARY, CUT_BUFFER0)\n\
+    Super <KeyPress> V: insert-selection(CLIPBOARD, PRIMARY, CUT_BUFFER0)
+
+URxvt.keysym.M-v:		eval:paste_clipboard
+URxvt.cutchars:			`"'&()*,;<=>?@[]^{|}.:/-
+
+! support right-clicking urls to open them
+URxvt.perl-ext-common:		default,matcher,selection-to-clipboard,-selection
+URxvt.url-launcher:		HOME/bin/firefox
+URxvt.matcher.button:		3
+URxvt.matcher.rend.0:		Uline
+
+! make xaw scrollbars act like normal ones
+XTerm.*.Scrollbar.translations: #override\
+    <Btn1Down>: StartScroll(Continuous) MoveThumb() NotifyThumb() \n\
+    <Btn2Down>: StartScroll(Forward) \n\
+    <Btn3Down>: StartScroll(Backward) \n\
+    <Btn1Motion>: MoveThumb() NotifyThumb() \n\
+    <BtnUp>: NotifyScroll(Proportional) EndScroll()
+
+SshAskpass*inputTimeout:	15
+
+! invert for qconsole
+qconsole.*.background:		FG
+qconsole.*.foreground:		#999999
+qconsole.*.borderColor:		FG
+qconsole.*.color0:		#999999
+
+#ifdef HIDPI
+SshAskpass*Button.font:		-*-lucida-medium-r-*-*-24-*-*-*-*-*-*-*
+SshAskpass*Dialog.font:		-*-lucida-medium-r-*-*-26-*-*-*-*-*-*-*
+SshAskpass*Indicator.width:	30
+SshAskpass*Indicator.height:	15
+#endif
