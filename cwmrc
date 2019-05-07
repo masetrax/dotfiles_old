@@ -6,54 +6,55 @@ color menufg "#81a1c1"
 color font "#d8dee9"
 color selfont "#3b4252"
 fontname "Terminus:size=9:bold"
-gap 15 15 15 15
-ignore "bar"
-ignore "firefox"
-ignore "Firefox"
-ignore "xclock"
+gap 40 20 20 20
 
 # STICKY MODE
 sticky yes
 
 # KEY BINDINGS
-bind-key 4S-1		group-toggle-1
-bind-key 4S-2		group-toggle-2
-bind-key 4S-3		group-toggle-3
-bind-key 4S-4		group-toggle-4
-bind-key 4S-5		group-toggle-5
-bind-key 4S-6		group-toggle-6
-bind-key 4S-7		group-toggle-7
-bind-key 4S-8		group-toggle-8
-bind-key 4S-9		group-toggle-all
-bind-key 4S-c		window-delete
+bind-key 4S-colon	menu-exec
+bind-key 4-Right	window-cycle
+bind-key 4-Left		window-rcycle
+bind-key 4-Up		group-cycle
+bind-key 4-Down		group-rcycle
+bind-key 4-1		group-toggle-1
+bind-key 4-2		group-toggle-2
+bind-key 4-3		group-toggle-3
+bind-key 4-4		group-toggle-4
+bind-key 4-5		group-toggle-5
+bind-key 4-6		group-toggle-6
+bind-key 4-7		group-toggle-7
+bind-key 4-8		group-toggle-8
+bind-key 4-9		group-toggle-all
+bind-key 4-x		window-delete
 bind-key 4S-h		window-hide
 bind-key 4S-g		menu-window-hidden
 bind-key 4S-r 		restart
 bind-key 4S-q		quit
-bind-key 4S-s		/home/masetrax/.scripts/dmenu_bar.sh
-bind-key 4S-Return 	"st"
+bind-key 4S-s		/home/masetrax/.code/dmenu_bar.sh
+bind-key 4S-Return 	"xterm"
 bind-key 4-p		"dmenu_run"
-bind-key 4-w		"firefox"
-bind-key 4-e		"tabbed -c surf -e"
+bind-key 4-d		"firefox"
+bind-key 4-s		"tabbed -c surf -e"
 bind-key 4S-f		window-fullscreen
 bind-key 4S-m		window-maximize
-bind-key 4S-v		window-vtile
+bind-key 4-v		window-vtile
+bind-key 4-h		window-htile
 bind-mouse 4S-1		window-move
 bind-mouse M-2		window-hide
 bind-mouse 4S-3		window-resize
 
 # APPLICATION MENU
-command " Term" urxvt
+command " Term" xterm
 command " WWW" firefox
-command " File Mgr" "st -e ranger"
-command " IRC" "st -e weechat"
+command " File Mgr" "xterm -e ranger"
+command " IRC" "xterm -e weechat"
 command " Torrents " transmission-gtk
-command " Music " "st -e cmus"
-command " Stats " /home/masetrax/.scripts/dmenu_bar.sh
+command " Music " "xterm -e cmus"
 
 # AUTOGROUPING
-autogroup 1 "st-256color", "st"
 autogroup 1 "surf", "Surf"
 autogroup 1 "tabbed", "tabbed"
 autogroup 2  Firefox
-autogroup 4 Transmission-gtk
+autogroup 5 Transmission-gtk
+

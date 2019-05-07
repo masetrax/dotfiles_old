@@ -19,7 +19,6 @@ lxappearance--
 paper-icon-theme--
 ranger--
 w3m--
-irssi--
 wget--
 gstreamer1--
 gstreamer1-plugins-bad--
@@ -29,9 +28,12 @@ gstreamer1-plugins-libav
 libnfs--
 autoconf--
 automake--
-dzen--
+dzen2--
 rtorrent--
 htop--
 mpd--
 ncmpcpp--
 mpc--
+scrot--
+buku--
+sxiv--
