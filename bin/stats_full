@@ -1,0 +1,85 @@
+#!/bin/sh
+
+FG='#81a1c1'
+BG='#2e3440'
+FONT='Terminus:size=9'
+WIDTH='700'
+HEIGHT='30'
+
+winTitle(){
+	window=$(xdotool getwindowfocus getwindowname)
+	echo -e "$window"
+}
+
+NowPlaying(){
+	if [ "$(mpc current)" ]; then
+		echo "playing/`mpc current | cut -c 1-50`"
+	else
+		echo ""
+	fi  
+}
+
+Version(){
+	vers=$(uname -rs)
+	echo os/$vers
+}
+
+Clock(){
+	clk=$(date "+%r")
+	echo time/$clk
+}
+
+Date(){
+	dte=$(date "+%a %b %d")
+	echo date/$dte
+}
+
+Packages(){
+	pkg=$(pkg_info -q | wc -l | awk '{$1=$1};1')
+	echo "pkg_info/$pkg"
+}
+
+Volume(){
+	mute=$(mixerctl -a |grep outputs.master.mute= | cut -d'=' -f2)
+	vol=$((`mixerctl -n outputs.master|cut -f 1 -d ','`*100/255))
+	if [ "$mute" = "on" ]; then
+		echo "vol/mute"
+	else
+		echo "vol/$vol%"
+	fi
+	#echo "vol/$vol%"
+}
+
+BattStat(){
+	battery=`apm -l`
+	battcharge=`apm -a`
+	if [ $battcharge -eq 1 ]; then
+		echo "ac/${battery}%"
+	elif [ $battery -eq 100 ]; then
+		echo "batt/${battery}%"
+	else
+		echo "batt/${battery}%"
+	fi
+}
+
+BattCharge(){
+	battmin=`apm -m`
+	if [ $battmin -eq 10]; then
+		pgrep -x dunst >/dev/null && notify-send -i battery "Battery level: $(apm -m) minutes remaining"
+	fi
+}
+
+while true; do
+	sleep 1
+	echo "$(NowPlaying)   $(Packages)    $(Volume)    $(BattStat)    $(Date)    $(Clock)   " 
+done | dzen2 -p -fn $FONT -bg $BG -fg $FG -ta r -h $HEIGHT -y 0 -x 500 -e 'button2=;' &
+
+while true; do
+	sleep 1
+	echo "    $(winTitle)"
+done | dzen2 -p -fn $FONT -bg $BG -fg $FG -ta l -w "500" -h $HEIGHT -y 0 -e 'button2=;'
+
+while true; do
+	sleep 600
+	$(BattCharge)
+done

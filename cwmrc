@@ -1,20 +1,39 @@
 # APPEARANCE
-borderwidth 4
-color activeborder "#81a1c1"
-color menubg "#3b4252"
-color menufg "#81a1c1"
-color font "#d8dee9"
-color selfont "#3b4252"
-fontname "Terminus:size=9:bold"
+borderwidth 1
+color activeborder 	"#81a1c1"
+color inactiveborder
+color groupborder 	"#6199BF"
+color ungroupborder 	"#BF616A"
+color urgencyborder 	"#ebcb8b"
+color menubg 		"#3b4252"
+color menufg 		"#81a1c1"
+color font 		"#d8dee9"
+color selfont 		"#3b4252"
+fontname 		"Terminus:size=9:bold"
 gap 40 20 20 20
 
-# STICKY MODE
-sticky yes
+# WINDOW SNAPPING
+moveamount 		1	# Set a default size for the keyboard movement bindings, in pixels.
+snapdist 		0	# Minimum distance to snap-to adjacent edge, in pixels.
 
-# KEY BINDINGS
+# WINDOWS TO IGNORE
+ignore 			"Navigator", "Firefox"
+ignore 			"bar"
+
+# STICKY MODE
+sticky 			yes
+
+# KEY BINDING LEGENDw
+# C			Control Key
+# M			Meta (ALT) Key
+# S			Shift Key
+# 4			Mod4 (Windows) Key
+
+# MENU BINDINGS
 bind-key 4S-colon	menu-exec
-bind-key 4-Right	window-cycle
-bind-key 4-Left		window-rcycle
+bind-key 4S-g		menu-window-hidden
+
+# GROUP KEY BINDINGS
 bind-key 4-Up		group-cycle
 bind-key 4-Down		group-rcycle
 bind-key 4-1		group-toggle-1
@@ -25,36 +44,73 @@ bind-key 4-5		group-toggle-5
 bind-key 4-6		group-toggle-6
 bind-key 4-7		group-toggle-7
 bind-key 4-8		group-toggle-8
-bind-key 4-9		group-toggle-all
+bind-key 4-9		group-toggle-9
+bind-key 4-0		group-toggle-all
+bind-key 4-g		window-group
+bind-key 4S-1		window-movetogroup-1
+bind-key 4S-2		window-movetogroup-2
+bind-key 4S-3		window-movetogroup-3
+bind-key 4S-4		window-movetogroup-4
+bind-key 4S-5		window-movetogroup-5
+bind-key 4S-6		window-movetogroup-6
+bind-key 4S-7		window-movetogroup-7
+bind-key 4S-8		window-movetogroup-8
+bind-key 4S-9		window-movetogroup-9
+bind-key 4C-1		group-only-1
+bind-key 4C-2		group-only-2
+bind-key 4C-3		group-only-3
+bind-key 4C-4		group-only-4
+bind-key 4C-5		group-only-5
+bind-key 4C-6		group-only-6
+bind-key 4C-7		group-only-7
+bind-key 4C-8		group-only-8
+bind-key 4C-9		group-only-9
+bind-key CS-1		group-close-1
+bind-key CS-2		group-close-2
+bind-key CS-3		group-close-3
+bind-key CS-4		group-close-4
+bind-key CS-5		group-close-5
+bind-key CS-6		group-close-6
+bind-key CS-7		group-close-7
+bind-key CS-8		group-close-8
+bind-key CS-9		group-close-9
+
+# WINDOW KEY BINDINGS
+bind-key 4-Right	window-cycle
+bind-key 4-Left		window-rcycle
 bind-key 4-x		window-delete
 bind-key 4S-h		window-hide
-bind-key 4S-g		menu-window-hidden
 bind-key 4S-r 		restart
 bind-key 4S-q		quit
-bind-key 4S-s		/home/masetrax/.code/dmenu_bar.sh
-bind-key 4S-Return 	"xterm"
-bind-key 4-p		"dmenu_run"
-bind-key 4-d		"firefox"
-bind-key 4-s		"tabbed -c surf -e"
 bind-key 4S-f		window-fullscreen
 bind-key 4S-m		window-maximize
 bind-key 4-v		window-vtile
 bind-key 4-h		window-htile
-bind-mouse 4S-1		window-move
-bind-mouse M-2		window-hide
-bind-mouse 4S-3		window-resize
+
+# CUSTOM APPLICATION KEY BINDINGS
+bind-key 4S-s		/home/masetrax/.code/dmenu_bar.sh
+bind-key 4S-Return 	"xterm"
+bind-key 4-c		"xterm"
+bind-key 4-p		"dmenu_run -b"
+bind-key 4-d		"firefox"
+bind-key 4-s		"tabbed -c surf -e"
+
+# MOUSE BINDINGS
+bind-mouse 4-1		window-move
+bind-mouse 4-2		window-hide
+bind-mouse 4-3		window-resize
 
 # APPLICATION MENU
-command " Term" xterm
-command " WWW" firefox
-command " File Mgr" "xterm -e ranger"
-command " IRC" "xterm -e weechat"
-command " Torrents " transmission-gtk
-command " Music " "xterm -e cmus"
+command 		" Term" xterm
+command 		" WWW" firefox
+command 		" File Mgr" "xterm -e ranger"
+command 		" IRC" "xterm -e weechat"
+command 		" Torrents " transmission-gtk
+command 		" Music " "xterm -e cmus"
 
 # AUTOGROUPING
-autogroup 1 "surf", "Surf"
-autogroup 1 "tabbed", "tabbed"
-autogroup 2  Firefox
-autogroup 5 Transmission-gtk
+autogroup 1 		"surf", "Surf"
+autogroup 1 		"tabbed", "tabbed"
+autogroup 2  		Firefox
+autogroup 5 		Transmission-gtk
 

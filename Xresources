@@ -43,7 +43,7 @@ Xcursor.size: 10
 *.borderColor:			#d8dee9
 
 ! xterm-specific settings
-XTerm.utf8:			1
+XTerm*locale:			utf8
 *.internalBorder: 		12
 *.saveLines:			20000
 *.scrollBar:			false
@@ -63,7 +63,7 @@ XTerm.allowSendEvents:		true
 ! which disables allowColorOps, but empty the list of actual disabled ops
 ! which effectively re-enables color ops
 XTerm.disallowedColorOps:
-
+XTerm.vt100.metaSendsEscape: 	true
 XTerm.visualBell:		false
 
 #ifdef HIDPI

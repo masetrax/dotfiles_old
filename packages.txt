@@ -37,3 +37,4 @@ mpc--
 scrot--
 buku--
 sxiv--
+xdotool--
