@@ -18,7 +18,7 @@ set barsticky on
 set font terminus:size=9
 set ignorehints on
 set inputwidth 0
-set msgwait 3
+set msgwait 5
 set onlyborder 0
 set padding 0 30 0 0
 set warp off
@@ -28,7 +28,7 @@ set winfmt %t
 # extract terminal background from Xdefaults to use as fgcolor
 #exec _C=`xrdb -query | grep '^*.background' | sed 's/.*:[[:space:]]//'`; ratpoison -c "set fgcolor $_C"
 set fgcolor #81a1c1
-set bgcolor #3b4252
+set bgcolor #2e3440
 
 # add leading and trailing space around this now that the padding is small
 set framefmt  frame %f (%wx%h) 
@@ -42,17 +42,14 @@ set bwcolor gray
 # keybindings
 escape s-a
 bind s split
-bind C-s split
 bind S hsplit
-bind C-S hsplit
-bind C-Tab focuslast
 bind C-r restart
 
 # Switch to CWM
 bind t tmpwm cwm
 
 # lock the screen
-bind L exec xset s activate
+bind L exec xlock
 
 # prevent accidental closes
 unbind k
@@ -66,19 +63,20 @@ definekey top s-5 vselect 5
 
 # other defined keys
 definekey top s-c exec xterm
-definekey top s-w exec firefox
 definekey top s-p exec dmenu_run -b
 definekey top s-t time
 definekey top s-x kill
 definekey top s-v vmove
 
-# aliases
-alias tmx exec urxvt -e tmux
-alias rgr exec urxvt -e ranger
+# Surf / Firefox / Go-to Address / Google search
+definekey top s-s exec tabbed -c surf -e
+definekey top s-d exec firefox
+definekey top s-f colon exec firefox http://www.
+definekey top s-g colon exec firefox http://www.google.com/search?q=
 
 # i like tab just going between the same two windows
-bind Tab focuslast
-bind grave focus
+definekey top s-Tab focuslast
+definekey top s-grave focus
 
 # act normal but prevent firefox raising itself when links are opened from
 # other apps
@@ -95,8 +93,5 @@ unmanage dzen title
 # initialize workspaces
 vinit
 hsplit
-
-# allow machine-specific overrides of keys
-source .ratpoisonrc.local
 
 exec xterm

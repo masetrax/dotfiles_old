@@ -35,6 +35,5 @@ mpd--
 ncmpcpp--
 mpc--
 scrot--
-buku--
 sxiv--
 xdotool--
