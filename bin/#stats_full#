@@ -1,16 +1,18 @@
 #!/bin/sh
 
 FG='#81a1c1'
-BG='#3B4252'
+BG='#2e3440'
 FONT='Terminus:size=9'
 WIDTH='700'
 HEIGHT='30'
 
+## Ratpoison like Window Title
 winTitle(){
 	window=$(xdotool getwindowfocus getwindowname)
 	echo -e "$window"
 }
 
+## Show ncmpcpp status
 NowPlaying(){
 	if [ "$(mpc current)" ]; then
 		echo "playing/`mpc current | cut -c 1-50`"
@@ -19,6 +21,7 @@ NowPlaying(){
 	fi  
 }
 
+## Show OpenBSD version number
 Version(){
 	vers=$(uname -rs)
 	echo os/$vers
@@ -39,6 +42,7 @@ Packages(){
 	echo "pkg_info/$pkg"
 }
 
+
 Volume(){
 	mute=$(mixerctl -a |grep outputs.master.mute= | cut -d'=' -f2)
 	vol=$((`mixerctl -n outputs.master|cut -f 1 -d ','`*100/255))
@@ -57,15 +61,29 @@ BattStat(){
 		echo "ac/${battery}%"
 	elif [ $battery -eq 100 ]; then
 		echo "batt/${battery}%"
-	elif [ $battery -le 25 ]; then
-		echo "batt/${battery}%"
 	else
 		echo "batt/${battery}%"
 	fi
 }
 
+BattCharge(){
+	battmin=`apm -m`
+	if [ $battmin -eq 10]; then
+		pgrep -x dunst >/dev/null && notify-send -i battery "Battery level: $(apm -m) minutes remaining"
+	fi
+}
 
 while true; do
 	sleep 1
-	echo "$(Packages)    $(Volume)    $(BattStat)    $(Date)    $(Clock)" 
-done | dzen2 -p -fn $FONT  -fg $FG -w $WIDTH -h $HEIGHT -y 0 -x 905 -e 'button2=;'
+	echo "$(NowPlaying)   $(Packages)    $(Volume)    $(BattStat)    $(Date)    $(Clock)   " 
+done | dzen2 -p -fn $FONT -bg $BG -fg $FG -ta r -h $HEIGHT -y 0 -x 500 -e 'button2=;' &
+
+while true; do
+	sleep 1
+	echo "    $(winTitle)"
+done | dzen2 -p -fn $FONT -bg $BG -fg $FG -ta l -w "500" -h $HEIGHT -y 0 -e 'button2=;'
+
+while true; do
+	sleep 600
+	$(BattCharge)
+done

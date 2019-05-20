@@ -32,6 +32,15 @@ BattStat(){
     else
 	echo "batt/${battery}%"
     fi
+    /home/masetrax/bin/battery_level[4]: nbotify-send: not found
+    thinkpad$ vim battery_level
+    thinkpad$ battery_level
+    thinkpad$ battery_level
+    thinkpad$ battery_level
+    thinkpad$ battery_level
+    thinkpad$ cd
+    thinkpad$ vim .cwmrc
+
 }
 
 

@@ -6,11 +6,13 @@ FONT='Terminus:size=9'
 WIDTH='700'
 HEIGHT='30'
 
+## Ratpoison like Window Title
 winTitle(){
 	window=$(xdotool getwindowfocus getwindowname)
 	echo -e "$window"
 }
 
+## Show ncmpcpp status
 NowPlaying(){
 	if [ "$(mpc current)" ]; then
 		echo "playing/`mpc current | cut -c 1-50`"
@@ -19,6 +21,7 @@ NowPlaying(){
 	fi  
 }
 
+## Show OpenBSD version number
 Version(){
 	vers=$(uname -rs)
 	echo os/$vers
