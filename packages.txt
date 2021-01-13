@@ -37,3 +37,4 @@ mpc--
 scrot--
 sxiv--
 xdotool--
+tree--
